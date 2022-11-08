@@ -1,0 +1,33 @@
+.btn{
+	background: #E16A00;
+	box-shadow: 0px 3px 8px rgba(225, 106, 0, 0.19);
+	border-radius: 3px;
+	display: block;
+
+	&__shopping-card{
+		border-radius: 3px;
+
+		p{
+			font-weight: 900;
+			font-size: 12px;
+			line-height: 196.19%;
+			text-transform: uppercase;
+			color: #FFFFFF;	
+		}
+	}
+
+	&__catalog{
+		filter: drop-shadow(0px 7px 35px rgba(214, 100, 0, 0.22));
+		max-height: 40px;
+		max-width: 105px;
+		align-self: start;
+
+		p{
+			font-size: 15px;
+			color: #FFFFFF;
+			font-weight: 900;
+			padding: 7px 10px;
+			align-items: center;
+		}
+	}
+}

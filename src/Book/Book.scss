@@ -1,0 +1,67 @@
+@import '../Styles/block/button';
+
+
+.book{
+	color: #241400;
+	text-align: left;
+	display: grid;
+	gap: 30px;
+
+	&__card{
+		display: flex;
+		padding: 18px 25px 25px 25px;
+		width: 184px;
+		height: 352px;
+		flex-direction: column;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+	}
+
+	&__img{
+		width: 130px;
+		height: 190px;
+		object-fit: cover;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	&__price-raite{
+		display: flex;
+		justify-content: space-between;
+		padding: 0px 10px;
+		margin-bottom: 13px;
+
+		span{
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+		&_star{
+			color: rgba(108, 235, 23, 0.644);
+		}
+	}
+
+	&__name{
+		font-weight: 700;
+		font-size: 12px;
+		color: #241400;
+		margin-bottom: 5px;
+	}
+
+	&__author-name{
+		margin-bottom: 13px;
+	}
+
+	&__shopping-cart{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__icon-heart{
+		width: 27px;
+		height: 27px;
+	}
+}
+
+
