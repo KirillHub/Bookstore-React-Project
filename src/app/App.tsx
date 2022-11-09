@@ -15,9 +15,8 @@ function App() {
 				<Header />  Header
 
 				{/* {0 ? <AxiosRequestData /> : 'hello'}  */}
-				<Book />
+				{/* <Book /> */}
 
-				{/* <AxiosRequestData/> */}
 
 			</div>
 		</div>

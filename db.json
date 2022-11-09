@@ -1,4 +1,20 @@
 {
+	"logo": [
+		{
+			"shopTitle": "библиотечная",
+			"shopSubTitle": "книжный магазин"
+		}
+	],
+	"menu": [
+		{
+			"id": 0,
+			"specialOffer": "Акции",
+			"catalog": "Каталог",
+			"delivery": "Доставка",
+			"aboutStore": "О магазине",
+			"blog": "Блог"
+		}
+	],
 	"books": [
 		{
 			"id": 0,
