@@ -21,12 +21,18 @@ export const logoSlice = createSlice({
 	initialState,
 	reducers: { //! не асинх. код
 		setChangeLogoInfoObj: (state, action) => {
-			// state.value = 1;
-			state.logo.push(action.payload);
+			switch (action.type) {
+
+				default:
+					return state;
+			}
 		},
-		setChangeLogoInfo: (state) => {
+		setChangeLogoInfoTest: (state) => {
 			// state.value + 1;
 		}
+		/*
+		в reducers можно добавлять сколько угодно методов
+		*/
 	},
 	/*============================================================================================================*/
 	extraReducers: (builder) => { //! работа с асинх. код
@@ -44,6 +50,6 @@ export const logoSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setChangeLogoInfo, setChangeLogoInfoObj } = logoSlice.actions
+export const { setChangeLogoInfoObj } = logoSlice.actions
 
 export const logoReducer = logoSlice.reducer

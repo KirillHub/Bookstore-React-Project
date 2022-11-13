@@ -1,0 +1,22 @@
+.links-header{
+	display: flex;
+	margin-right: 100px;
+}
+
+.links-header__row{
+
+	&:not(:last-child){
+		margin-right: 20px;
+	}
+
+	a{
+		display: flex;
+		height: 100%;
+		align-items: center;
+		color: inherit;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

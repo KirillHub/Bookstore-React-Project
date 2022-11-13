@@ -1,32 +1,28 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { BookDescr } from './BookRatingPrise/BookRatingPrise';
-import { TBook } from './BookTypes/BookTypes';
 import './Book.scss';
 import BookCart from './BookCart/BookCart';
 
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { fetchBooks, settingTest } from '../store/bookSlice/slice';
+import { TBooks } from '../store/bookSlice/type';
 
 const Book = () => {
 
-	const [products, setProducts] = useState<TBook[]>();
+	const dispatch = useAppDispatch();
+	const books = useAppSelector((state) => state.booksList);
 
-	const axiosReq = async () => {
-		const apiUrl = 'http://localhost:8000/books';
-		const response = await axios.get<TBook[]>(apiUrl);
-
-		setProducts(response.data);
-	};
 
 	useEffect(() => {
-		axiosReq()
-	}, [setProducts]);
+		dispatch(fetchBooks())
+	}, []);
 
-	console.log(products);
 
 	return (
 		<div className='book book-block'>
+
 			{
-				products?.map((book: any) =>
+				books?.books?.map((book: TBooks) =>
 					<div className='book__card'
 						key={book.id}>
 						<img
@@ -47,10 +43,10 @@ const Book = () => {
 						</div>
 
 						<BookCart />
-
 					</div>
 				)
 			}
+
 		</div>
 	);
 
@@ -58,3 +54,5 @@ const Book = () => {
 
 
 export default Book;
+
+

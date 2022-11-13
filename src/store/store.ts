@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { logoReducer } from './logoSlice/slice';
-import { cringeReducer } from './cringe';
+import { booksReducer } from './bookSlice/slice';
 
 export const store = configureStore({
 	reducer: {
 		headerLogo: logoReducer,
-		// zanyKey: cringeReducer,
+		booksList: booksReducer,
 	},
 })
 
@@ -14,6 +14,13 @@ export const store = configureStore({
 export type RootState = ReturnType<typeof store.getState>;
 
 export type AppDispatch = typeof store.dispatch;
+
+
+/*
+useAppSelector  
+useAppDispatch - это даннные, записанные в store.dispatch, function
+хуки, которые обязательны для импорта
+*/
 
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 

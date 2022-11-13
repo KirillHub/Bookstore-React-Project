@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TAxiosRequestData } from '../../AxiosRequestData/typesAxiosRequestData';
 
+interface TDataLogo {
+	shopTitle: string;
+	shopSubTitle: string;
+}
 
 export const AxiosRequestDataTest = () => { //!
 
@@ -35,4 +39,10 @@ export const AxiosRequestDataTest = () => { //!
 };
 
 
+//? как правильно присвоить элементы интерфейса TDataLogo?
+const axiosReqTitle = async () => {
+	const link = 'http://localhost:8000/logo';
+	const response = await axios.get<TDataLogo[]>(link)
 
+	return response.data
+};

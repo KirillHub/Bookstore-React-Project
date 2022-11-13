@@ -1,35 +1,3 @@
-import { createSlice } from '@reduxjs/toolkit'
-
-
-
-export interface BaZaState {
-	cringe1: number,
-	baZa: object[];
-}
-
-const initialState: BaZaState = {
-	cringe1: 0,
-	baZa: [{
-		a() {
-			return 0
-		}
-	}]
-}
-
-export const cringeSlice = createSlice({
-	name: 'counter',
-	initialState,
-	reducers: {
-
-	},
-})
-
-// Action creators are generated for each case reducer function
-export const { } = cringeSlice.actions
-
-export const cringeReducer = cringeSlice.reducer
-
-
 
 export type UserPost = {
 	_id: string;
