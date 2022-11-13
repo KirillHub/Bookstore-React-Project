@@ -2,12 +2,12 @@
 .header__search-block{
 	position: relative;
 	display: flex;
-	margin-right: 100px;
+	margin-right: 80px;
 
 	&::after {
 		position: absolute;
 		content: '';
-		top: -200%;
+		top: -65px;
 		left: 50%;
 		width: 1px;
 		background-color: #69676496;

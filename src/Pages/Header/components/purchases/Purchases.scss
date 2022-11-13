@@ -1,0 +1,37 @@
+
+.purchases-header{
+	display: flex
+}
+
+.purchases-header__btn{
+
+	button{
+		background-color: inherit;
+		margin-right: 12px;
+
+		svg{
+			width: 35px;
+			height: 35px;
+			align-items: center;
+		}
+	}
+}
+
+.purchases-header__amount{
+	display: flex;
+}
+
+.purchases-header__product-price{
+	line-height: 260%;
+	margin-right: 8px;
+}
+
+.purchases-header__button{
+		background-color: inherit;
+		svg{
+			width: 9px;
+			height: 5px;
+		}
+}
+
+

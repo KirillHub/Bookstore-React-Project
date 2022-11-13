@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../store/store';
-import { fetchLogo, setChangeLogoInfoObj } from "../../../../store/logoSlice/slice";
+import { fetchLogo } from "../../../../store/logoSlice/slice";
 import Waiting from '../../../../dataStatusLoading/Waiting/Waiting';
 import BookSVG from '../../../../SVG-components/BookSVG';
 import './Logo.scss'

@@ -12,6 +12,7 @@ export const fetchLogo = createAsyncThunk<Logo>('logo/fetchLogo', async () => {
 const initialState: LogoSliceState = {
 	value: 0,
 	logo: [],
+	bookID: [],
 	status: Status.LOADING,
 };
 
@@ -20,19 +21,11 @@ export const logoSlice = createSlice({
 	name: 'counter',
 	initialState,
 	reducers: { //! не асинх. код
-		setChangeLogoInfoObj: (state, action) => {
-			switch (action.type) {
+		addedToCartBooks: (state, action) => {
+			// console.log(state.bookID);
+			// state.bookID.push(action.payload);
 
-				default:
-					return state;
-			}
 		},
-		setChangeLogoInfoTest: (state) => {
-			// state.value + 1;
-		}
-		/*
-		в reducers можно добавлять сколько угодно методов
-		*/
 	},
 	/*============================================================================================================*/
 	extraReducers: (builder) => { //! работа с асинх. код
@@ -50,6 +43,6 @@ export const logoSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setChangeLogoInfoObj } = logoSlice.actions
+export const { addedToCartBooks } = logoSlice.actions;
 
 export const logoReducer = logoSlice.reducer

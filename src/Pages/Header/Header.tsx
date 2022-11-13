@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Links } from "./components/links/Links";
 import './Header.scss';
 import Search from "./components/search/Search";
+import Purchases from "./components/purchases/Purchases";
 
 
 export default function Header() {
@@ -17,6 +18,7 @@ export default function Header() {
 			<Logo />
 			<Links />
 			<Search/>
+			<Purchases/>
 
 		</div>
 

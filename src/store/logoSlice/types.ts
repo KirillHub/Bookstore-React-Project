@@ -12,6 +12,7 @@ export enum Status {
 
 export interface LogoSliceState {
 	value: number,
+	bookID: number[],
 	logo: Logo | any,
 	status: Status
 }

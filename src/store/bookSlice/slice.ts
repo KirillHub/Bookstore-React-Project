@@ -12,6 +12,7 @@ export const fetchBooks = createAsyncThunk<TBooks>('books/fetchBooks', async () 
 
 const initialState: BookSliceState = {
 	books: [],
+	selectedBooks: [],
 	status: Status.LOADING
 };
 
@@ -20,6 +21,7 @@ export const booksSlice = createSlice({
 	initialState,
 	reducers: {
 		settingTest: (state, action) => {
+			console.log('we here');
 			console.log(action.payload);
 		}
 	},

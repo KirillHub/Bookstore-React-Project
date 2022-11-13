@@ -1,6 +1,6 @@
 
 const MagnifierSVG = () => {
-
+	
 	return (
 		<div
 			className="header__magnifier">

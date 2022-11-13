@@ -9,12 +9,12 @@
 	grid-template-rows: (3, minmax(44px, auto));
 	justify-content: space-around;
 	row-gap: 30px;
-	padding: 0px 30px;
+	padding: 0px 20px;
 
 	&__card{
 		display: grid;
 		padding: 18px 25px 25px 25px;
-		width: 184px;
+		max-width: 195px;
 		min-height: 352px;
 		flex-direction: column;
 		background: #FFFFFF;
@@ -67,6 +67,10 @@
 		padding-top: 4px;
 		width: 27px;
 		height: 27px;
+	}
+
+	&__btn-favorites{
+		background-color: inherit;
 	}
 }
 

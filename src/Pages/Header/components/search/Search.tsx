@@ -13,7 +13,7 @@ const Search = () => {
 				placeholder="Поиск"
 			/>
 		</div>
-	)
+	);
 };
 
 

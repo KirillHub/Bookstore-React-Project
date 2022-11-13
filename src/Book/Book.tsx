@@ -42,7 +42,7 @@ const Book = () => {
 							{book.authorName}
 						</div>
 
-						<BookCart />
+						<BookCart takeProduct={book} />
 					</div>
 				)
 			}
