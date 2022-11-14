@@ -1,0 +1,16 @@
+
+.description {
+	max-width: 420px;
+	margin-right: 230px;
+	&__title{
+		font-weight: 900;
+		font-size: 36px;
+		color: #241400;
+		margin-bottom: 17px;
+	}
+	&__subtitle{
+		margin-bottom: 17px;
+		font-size: 13px;
+		line-height: 180%;
+	}
+}

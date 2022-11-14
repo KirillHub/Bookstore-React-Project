@@ -20,9 +20,8 @@ export const booksSlice = createSlice({
 	name: 'books',
 	initialState,
 	reducers: {
-		settingTest: (state, action) => {
-			console.log('we here');
-			console.log(action.payload);
+		setSettingTest: (state, action) => {
+			state.selectedBooks.push(action.payload)
 		}
 	},
 	extraReducers: (builder) => {
@@ -39,7 +38,7 @@ export const booksSlice = createSlice({
 	}
 });
 
-export const { settingTest } = booksSlice.actions;
+export const { setSettingTest } = booksSlice.actions;
 
 export const booksReducer = booksSlice.reducer;
 

@@ -27,7 +27,7 @@ aside {
 }
 html,
 body {
-	background-color: var(--background-color-theme);
+	background-color: #fffaf5d8;
 	font-family: 'Montserrat', sans-serif;
 	color: #252B42;
 	font-style: normal;

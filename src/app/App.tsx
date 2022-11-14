@@ -3,6 +3,7 @@ import './App.scss';
 import Header from '../Pages/Header/Header';
 
 import Book from '../Book/Book';
+import Promo from '../Pages/Promo/Promo';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
 	return (
 		<div className="App">
 			<div className='_wrapper container'>
-				<Header />  
+				<Header />
+				<Promo />
 
 				{/* {0 ? <AxiosRequestData /> : 'hello'}  */}
 				<Book />

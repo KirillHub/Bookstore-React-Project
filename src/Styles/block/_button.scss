@@ -13,13 +13,14 @@
 			line-height: 196.19%;
 			text-transform: uppercase;
 			color: #FFFFFF;	
+			padding: 5px 15px;
 		}
 	}
 
 	&__catalog{
 		filter: drop-shadow(0px 7px 35px rgba(214, 100, 0, 0.22));
-		max-height: 40px;
-		max-width: 105px;
+		height: 50px;
+		width: 215px;
 		align-self: start;
 
 		p{
