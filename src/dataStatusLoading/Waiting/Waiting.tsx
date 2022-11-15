@@ -1,10 +1,10 @@
+import LoadingSpinnerSVG from "../../SVG-components/LoadingSpinnerSVG";
 
 const Waiting = () => {
 
 	return (
 		<>
-			ЗАГРУЗКА...
-			{/* later take here loading gif */}
+			<LoadingSpinnerSVG />
 		</>
 	)
 };

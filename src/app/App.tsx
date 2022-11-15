@@ -4,6 +4,12 @@ import Header from '../Pages/Header/Header';
 
 import Book from '../Book/Book';
 import Promo from '../Pages/Promo/Promo';
+import Slider from 'react-slick';
+import { Component } from 'react';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Waiting from '../dataStatusLoading/Waiting/Waiting';
 
 
 function App() {
@@ -14,8 +20,8 @@ function App() {
 				<Header />
 				<Promo />
 
-				{/* {0 ? <AxiosRequestData /> : 'hello'}  */}
 				<Book />
+
 
 
 			</div>
@@ -25,3 +31,6 @@ function App() {
 
 
 export default App;
+
+
+
