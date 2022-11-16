@@ -19,7 +19,7 @@ export enum Status {
 }
 
 
-export interface BookSliceState {
+export interface BooksSliceState {
 	selectedBooks: TBooks[]
 	books: TBooks[] | any | undefined, //TODO: del. type "any"
 	status: Status

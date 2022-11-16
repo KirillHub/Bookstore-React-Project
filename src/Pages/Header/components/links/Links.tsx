@@ -1,8 +1,7 @@
 import "./Links.scss";
 
-const linkNames = ['Акции', 'Каталлог', 'Доставка', 'О магазине', 'Блог'];
-
 export const Links = () => {
+	const linkNames = ['Акции', 'Каталлог', 'Доставка', 'О магазине', 'Блог'];
 
 	return (
 		<div

@@ -1,17 +1,12 @@
 import Slider from 'react-slick';
 import './PromoSlider.scss';
 import ArrowNextSVG from '../SVG-components/SliderSVG/ArrowNextVG';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 
-export default function PromoSlider() {
+const PromoSlider = () => {
 
-	interface TSlickNextSliderArrow {
-		slickNext: () => void;
-	};
-
-	const slider = useRef<TSlickNextSliderArrow>(null);
-
+	const slider = useRef<Slider>(null);
 
 	function SampleNextArrow(props) {
 		const { className, style, onClick } = props;
@@ -20,9 +15,6 @@ export default function PromoSlider() {
 				className={className}
 				style={{ ...style, display: "block", background: "red" }}
 				onClick={onClick}>
-
-				{/* <ArrowNextSVG /> */}
-
 			</div>
 		);
 	};
@@ -49,14 +41,21 @@ export default function PromoSlider() {
 
 	};
 
-
-
 	return (
 		<>
-
 			<button
+				style={{
+					backgroundColor: 'inherit',
+					position: 'absolute',
+					top: '420px',
+					left: '215px',
+					width: '40px',
+					height: '40px'
+				}}
 				onClick={() => slider?.current?.slickNext()}
-			>NEXT</button>
+			>
+				<ArrowNextSVG width={30} height={27} />
+			</button>
 
 			<Slider ref={slider} {...settingOwnClasses}>
 				<div>
@@ -76,3 +75,4 @@ export default function PromoSlider() {
 }
 
 
+export default PromoSlider;

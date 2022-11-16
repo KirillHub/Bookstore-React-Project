@@ -1,0 +1,33 @@
+
+@media only screen and (max-width: 1200px){
+
+}
+
+@media only screen and (max-width: 992px){
+	.books {
+		padding: 30px 15px 35px 15px;
+		grid-template-columns: repeat(3, minmax(200px, auto));
+		grid-template-rows: repeat(2, auto);
+		
+	}
+}
+
+@media only screen and (max-width: 768px){
+	.books{
+		padding: 30px 15px 35px 15px;
+		grid-template-columns: repeat(2, minmax(200px, auto));
+		grid-template-rows: auto;
+	}
+}
+
+@media only screen and (max-width: 576px){
+	.books{
+		padding: 15px;
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+	}
+}
+
+@media only screen and (max-width: 390px){
+
+}

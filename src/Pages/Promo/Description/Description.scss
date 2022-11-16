@@ -1,7 +1,13 @@
+.promo__description-block {
+	display: flex;
+	align-items: center;
+}
 
 .description {
 	max-width: 420px;
 	margin-right: 230px;
+	align-items: center;
+	justify-content: center;
 	&__title{
 		font-weight: 900;
 		font-size: 36px;

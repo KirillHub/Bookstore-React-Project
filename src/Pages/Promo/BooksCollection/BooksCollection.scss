@@ -29,14 +29,12 @@
 	&__descr{
 		font-size: 13px;
 		line-height: 120%;
-		// max-width: 220px;
 		margin-bottom: 10px;
 	}
 	&__footer{
 		display: flex;
 		justify-content: space-between;
 	}
-
 
 	&__rectangle-main{
 		position: absolute;
@@ -73,7 +71,7 @@
 
 	&__rectangle-bottom{
 		position: absolute;
-		top: 340px;
+		top: 330px;
 		left: 35px;
 		width: 300px;
 		height: 76px;

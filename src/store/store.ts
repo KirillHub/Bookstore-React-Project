@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { logoReducer } from './logoSlice/slice';
-import { booksReducer } from './bookSlice/slice';
+import { booksReducer } from './booksSlice/slice';
 
 export const store = configureStore({
 	reducer: {

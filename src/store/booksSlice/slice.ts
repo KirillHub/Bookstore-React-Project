@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import axios from '../../backend/axios';
 
-import { BookSliceState, Status, TBooks } from './type';
+import { BooksSliceState, Status, TBooks } from './type';
 
 
 export const fetchBooks = createAsyncThunk<TBooks>('books/fetchBooks', async () => {
@@ -10,7 +10,7 @@ export const fetchBooks = createAsyncThunk<TBooks>('books/fetchBooks', async () 
 	return data;
 });
 
-const initialState: BookSliceState = {
+const initialState: BooksSliceState = {
 	books: [],
 	selectedBooks: [],
 	status: Status.LOADING
