@@ -1,32 +1,14 @@
 
-.os-scrollbar {
-}
-
-.os-scrollbar-track {
-}
-.os-scrollbar-handle{
-	
-	// position: relative;
-	// &::before{
-	// 	position: absolute;
-	// 	left: 0%;
-	// 	margin: 0 auto;
-	// 	background-color: aqua;
-	// 	width: 20%;
-	// 	height: 30px;
-	// }
-}
-
-.custom-class{
-	width: calc(100%)
-}
 
 .books{
+	display: flex;
 	color: #241400;
 	text-align: left;
 	padding: 0 15px 45px;
-	column-gap: 80px;
-	display: flex;
+	column-gap: 70px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	
 
 /*
 	padding: 50px 20px 65px 20px;
@@ -40,12 +22,6 @@
 	gap: 30px;
 */
 
-
-/*
-! working version with -wevkit-scrollbar
-overflow-x: auto;
-overflow-y: hidden;
-display: flex;
 
 &::-webkit-scrollbar  {
 	width: 2em;
@@ -65,12 +41,12 @@ display: flex;
  &::-webkit-input-placeholder {
 	color: rgba(255, 255, 255, 0.835) !important;
  }
-*/
+
 
 	&__card{
 		display: grid;
-		padding: 25px;
-		width: 205px;
+		padding: 20px;
+		width: 255px;
 		min-height: 352px;
 		flex-direction: column;
 		background: #FFFFFF;

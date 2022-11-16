@@ -8,7 +8,11 @@ import HeartSVG from '../../SVG-components/HeartSVG';
 import { setSettingTest } from "../../store/booksSlice/slice";
 import Waiting from '../DataStatusLoading/Waiting/Waiting';
 
-import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
+// import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
+import { useMatchMedia } from '../../hooks/use-match-media';
+import { useRef } from 'react';
+
+
 
 const Books = () => {
 
@@ -18,6 +22,10 @@ const Books = () => {
 	const [req, setReq] = useState(0);
 	const books = booksList.books;
 	const selectedBooks = booksList.selectedBooks;
+
+	// const { isMobile } = useMatchMedia();
+	// const hasScrooll = isMobile;
+	const todoWrapper = useRef(null);
 
 	useEffect(() => {
 		dispatch(fetchBooks())
@@ -39,7 +47,7 @@ const Books = () => {
 			y: 'scroll',
 		},
 		scrollbars: {
-			theme: 'os-theme-dark',
+			theme: 'os-theme-dark ',
 			visibility: 'auto',
 			autoHide: 'never',
 			autoHideDelay: 1300,
@@ -49,23 +57,36 @@ const Books = () => {
 		},
 	};
 
-	return (
+	/*
 		<OverlayScrollbarsComponent
-			element="span"
-			className='os-theme-dark custom-class'
-			options={{
-				scrollbars: {
-					theme: 'os-theme-dark custom-class'
-				}
-			}}
-			events={{ scroll: () => { /* ... */ } }}>
-			<div className='books'>
+				element="span"
+				className='os-theme-dark custom-class os-host-flexbox'
+				options={{
+					scrollbars: {
+						theme: 'os-theme-dark custom-class os-host-flexbox'
+					}
+				}}
+				events={{ scroll: () => { } }}>
+					</OverlayScrollbarsComponent >
+	*/
+
+	let _width = `${books.length * 100}px`;
+
+	return (
+		<div
+			className='wrapper-scroll'
+			style={{ width: `${_width}`}}
+			ref={todoWrapper}>
+
+			<div className='books'
+
+				style={{ width: `${_width}` }}>
 				{
 					books.length === 0 ? <Waiting /> :
 						<>
 							{books?.map((book: TBooks) =>
 
-								<div className={`books__card ${book.id}`}
+								<div className={`books__card`}
 									key={book.id}
 									onClick={() => setReq(req + 1)}>
 									<img
@@ -98,7 +119,7 @@ const Books = () => {
 												className='btn btn__shopping-card'
 												style={{ backgroundColor: 'gray' }}
 											>
-												<p>открыть кор.</p>
+												<p>корзина</p>
 											</button>}
 
 										<button
@@ -112,7 +133,8 @@ const Books = () => {
 				}
 
 			</div>
-		</OverlayScrollbarsComponent >
+
+		</div>
 	);
 
 };
