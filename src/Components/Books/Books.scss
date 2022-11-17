@@ -1,5 +1,4 @@
 
-
 .books{
 	display: flex;
 	color: #241400;
@@ -9,7 +8,6 @@
 	overflow-x: scroll;
 	overflow-y: hidden;
 	
-
 /*
 	padding: 50px 20px 65px 20px;
 	color: #241400;
@@ -22,11 +20,9 @@
 	gap: 30px;
 */
 
-
 &::-webkit-scrollbar  {
-	width: 2em;
+	width: 2em !important;
 	height: 1em;
-	// width: 100% !important;
  }
  &::-webkit-scrollbar-track {
 	background: #D7D7D7 !important;
@@ -42,13 +38,14 @@
 	color: rgba(255, 255, 255, 0.835) !important;
  }
 
-
 	&__card{
+		
+		// flex: 1 1 auto;
 		display: grid;
 		padding: 20px;
-		width: 255px;
-		min-height: 352px;
-		flex-direction: column;
+		// width: 455px !important;
+		// // min-height: 352px;
+		// // flex-direction: column;
 		background: #FFFFFF;
 		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 	}
@@ -56,8 +53,8 @@
 	&__img{
 		width: 130px;
 		height: 190px;
-		object-fit: cover;
-		display: block;
+		// object-fit: cover;
+		// display: block;
 		margin: 0 auto;
 		margin-bottom: 10px;
 	}
@@ -110,7 +107,6 @@
 		background-color: inherit;
 	}
 }
-
 
 /*
 * @media - adaptive media req from _media.scss;

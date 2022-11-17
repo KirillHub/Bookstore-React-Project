@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { BooksDescr } from './BooksRatingPrise/BooksRatingPrise';
 import './Books.scss';
 import { useAppDispatch, useAppSelector } from "../../store/store";
-import { fetchBooks } from '../../store/booksSlice/slice';
+import { fetchBooks, sortArrayOfBooks } from '../../store/booksSlice/slice';
 import { TBooks } from '../../store/booksSlice/type';
 import HeartSVG from '../../SVG-components/HeartSVG';
 import { setSettingTest } from "../../store/booksSlice/slice";
@@ -10,77 +10,72 @@ import Waiting from '../DataStatusLoading/Waiting/Waiting';
 
 // import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import { useMatchMedia } from '../../hooks/use-match-media';
-import { useRef } from 'react';
 
 
+const useRandomBooks = (_booksArray: any) => {
+
+	console.log(_booksArray);
+
+	const _sortArrayOfBooks = _booksArray.keys().sort(() => Math.random() - 0.5).slice(0, 7);
+	console.log(_sortArrayOfBooks);
+
+
+	// const getValues = _booksArray.sort();
+
+	/*
+		const getValues = _booksArray.sort().map(book => console.log(book));
+	
+		const [values, setValues] = useState(getValues);
+	
+		useEffect(() => {
+			const handler = () => setValues(getValues);
+	
+			console.log(handler);
+			
+		});
+	*/
+};
 
 const Books = () => {
 
 	const dispatch = useAppDispatch();
-	const booksList = useAppSelector((state) => state.booksList);
+	const booksList = useAppSelector(state => state.booksList);
 
 	const [req, setReq] = useState(0);
+
+	const [stateBooks, setStateBooks] = useState<any>([]);
+
 	const books = booksList.books;
 	const selectedBooks = booksList.selectedBooks;
 
-	// const { isMobile } = useMatchMedia();
-	// const hasScrooll = isMobile;
-	const todoWrapper = useRef(null);
+	// console.log(books);
+	// console.log(dispatch(sortArrayOfBooks(books)));
+
+	// const [_sortedArray, setSortedArray] = useState([]);
+
+	// console.log([...books]?.sort((a, b) => +b?.id - +a?.id * Math.random()));
+
+	// console.log(books); 
+
+	let a = dispatch(sortArrayOfBooks())
+console.log(a);
+	//? .sort((a, b) => b - a * Math.random())
+	// let _a = dispatch(sortArrayOfBooks(books))
+
 
 	useEffect(() => {
 		dispatch(fetchBooks())
+
 	}, []);
-
-	console.log(selectedBooks);
-
-	const defaultOptions = {
-		paddingAbsolute: false,
-		showNativeOverlaidScrollbars: false,
-		update: {
-			elementEvents: [['img', 'load']],
-			debounce: [0, 33],
-			attributes: null,
-			ignoreMutation: null,
-		},
-		overflow: {
-			x: 'scroll',
-			y: 'scroll',
-		},
-		scrollbars: {
-			theme: 'os-theme-dark ',
-			visibility: 'auto',
-			autoHide: 'never',
-			autoHideDelay: 1300,
-			dragScroll: true,
-			clickScroll: false,
-			pointers: ['mouse', 'touch', 'pen'],
-		},
-	};
-
-	/*
-		<OverlayScrollbarsComponent
-				element="span"
-				className='os-theme-dark custom-class os-host-flexbox'
-				options={{
-					scrollbars: {
-						theme: 'os-theme-dark custom-class os-host-flexbox'
-					}
-				}}
-				events={{ scroll: () => { } }}>
-					</OverlayScrollbarsComponent >
-	*/
 
 	let _width = `${books.length * 100}px`;
 
 	return (
 		<div
 			className='wrapper-scroll'
-			style={{ width: `${_width}`}}
-			ref={todoWrapper}>
+			>
 
-			<div className='books'
-
-				style={{ width: `${_width}` }}>
+			<div className='books'>
 				{
 					books.length === 0 ? <Waiting /> :
 						<>

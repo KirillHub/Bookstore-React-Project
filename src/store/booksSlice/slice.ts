@@ -22,6 +22,12 @@ export const booksSlice = createSlice({
 	reducers: {
 		setSettingTest: (state, action) => {
 			state.selectedBooks.push(action.payload)
+		},
+
+		sortArrayOfBooks: state => {
+			// state.books.sort(() => Math.random() - 0.5).slice(0, 7)
+			//? action -> то, что передаём в функцию (данные с бэка)
+			[...state.books].sort((a, b) => +b?.id - +a?.id * Math.random());
 		}
 	},
 	extraReducers: (builder) => {
@@ -38,7 +44,7 @@ export const booksSlice = createSlice({
 	}
 });
 
-export const { setSettingTest } = booksSlice.actions;
+export const { setSettingTest, sortArrayOfBooks } = booksSlice.actions;
 
 export const booksReducer = booksSlice.reducer;
 

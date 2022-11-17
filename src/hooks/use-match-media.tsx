@@ -13,7 +13,7 @@ const queries = [
 	'(min-width: 1200px)'
 ];
 
-export function useMatchMedia () {
+export function useMatchMedia() {
 	const mediaQueryLists = queries.map(query => matchMedia(query));
 
 	const getValues = mediaQueryLists.map(mql => mql.matches);
@@ -25,7 +25,7 @@ export function useMatchMedia () {
 
 		mediaQueryLists.forEach(mql => mql.addEventListener('change', handler));
 
-		return () : void => mediaQueryLists.forEach(mql => mql.removeEventListener('change', handler));
+		return (): void => mediaQueryLists.forEach(mql => mql.removeEventListener('change', handler));
 	});
 
 	return ['isMobile', 'isTablet', 'isDesktop'].reduce((acc, screen, index) => ({

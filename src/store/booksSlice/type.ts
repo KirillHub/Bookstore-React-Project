@@ -1,4 +1,4 @@
-export interface TBooks {
+export interface TBooks{
 	id: number;
 	counter: number;
 	imageUrl: string;

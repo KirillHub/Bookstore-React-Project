@@ -15,7 +15,7 @@ function App() {
 				<Header />
 				<Promo />
 				<HotArrivals />
-				<Sale/>
+				{/* <Sale/> */}
 			</div>
 			
 		</div>

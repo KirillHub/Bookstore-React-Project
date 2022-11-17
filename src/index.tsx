@@ -5,7 +5,6 @@ import App from './app/App';
 
 import { store } from './store/store';
 import { Provider } from 'react-redux'
-// import 'overlayscrollbars/overlayscrollbars.min.css';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
