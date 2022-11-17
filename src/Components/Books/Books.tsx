@@ -8,7 +8,6 @@ import HeartSVG from '../../SVG-components/HeartSVG';
 import { setSettingTest } from "../../store/booksSlice/slice";
 import Waiting from '../DataStatusLoading/Waiting/Waiting';
 
-// import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import { useMatchMedia } from '../../hooks/use-match-media';
 
 
@@ -57,23 +56,27 @@ const Books = () => {
 
 	// console.log(books); 
 
-	let a = dispatch(sortArrayOfBooks())
-console.log(a);
+
+
 	//? .sort((a, b) => b - a * Math.random())
 	// let _a = dispatch(sortArrayOfBooks(books))
+
+	let a = dispatch(sortArrayOfBooks(books));
+		console.log(a);
 
 
 	useEffect(() => {
 		dispatch(fetchBooks())
-
 	}, []);
+
+
 
 	let _width = `${books.length * 100}px`;
 
 	return (
 		<div
 			className='wrapper-scroll'
-			>
+		>
 
 			<div className='books'>
 				{

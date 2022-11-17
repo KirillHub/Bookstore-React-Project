@@ -4,7 +4,10 @@ import './index.scss';
 import App from './app/App';
 
 import { store } from './store/store';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
+
+import { BrowserRouter } from 'react-router-dom'
+import { ChakraProvider } from '@chakra-ui/react'
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -14,8 +17,10 @@ const root = ReactDOM.createRoot(
 root.render(
 	// <React.StrictMode>
 	<Provider store={store}>
-		<App />
-	</Provider>,
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+	</Provider>
 	// </React.StrictMode>
 );
 
