@@ -2,18 +2,18 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { logoReducer } from './logoSlice/slice';
 import { booksReducer } from './booksSlice/slice';
-import { api } from './services/auth';
+// import { api } from './services/auth';
 import authReducer from "./authSlice/authSlice"
 
 export const store = configureStore({
 	reducer: {
 		headerLogo: logoReducer,
 		booksList: booksReducer,
-		[api.reducerPath]: api.reducer,
-		auth: authReducer
+		// [api.reducerPath]: api.reducer,
+		// auth: authReducer
 	},
-	middleware: (getDefaultMiddleware) =>
-		getDefaultMiddleware().concat(api.middleware),
+	// middleware: (getDefaultMiddleware) =>
+	// 	getDefaultMiddleware().concat(api.middleware),
 });
 
 

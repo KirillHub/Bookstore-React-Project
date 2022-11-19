@@ -9,7 +9,9 @@ export interface TBooks{
 	description: string;
 	category: string;
 	categoryRu: string;
+	priceWithoutDiscount: string;
 };
+
 
 
 export enum Status {
@@ -20,7 +22,9 @@ export enum Status {
 
 
 export interface BooksSliceState {
-	selectedBooks: TBooks[]
-	books: TBooks[] | any | undefined, //TODO: del. type "any"
+	selectedBooks: TBooks[] 
+	books: TBooks[]
+	booksSort: TBooks[]
+	discountBooks: TBooks[]
 	status: Status
 }

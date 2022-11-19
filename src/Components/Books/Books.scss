@@ -48,37 +48,47 @@
 
 	&__img{
 		width: 140px;
-		height: 200px;
+		height: 220px;
 		object-fit: cover;
 		margin: 0 auto;
-		margin-bottom: 10px;
+		margin-bottom: 25px;
 	}
 
 	&__price-raite{
+		position: relative;
 		display: flex;
 		justify-content: space-between;
-		padding: 0px 10px;
-		margin-bottom: 13px;
+		margin-bottom: 8px;
 
 		span{
 			font-weight: 700;
-			font-size: 18px;
+			font-size: 17px;
 		}
 
 		&_star{
 			color: rgba(108, 235, 23, 0.644);
 		}
 	}
+	&__price-without-discount{
+		position: absolute;
+		top: -27px;
+		left: 62%;
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 196.19%;
+		text-decoration-line: line-through;
+		color: #D70000;
+	}
 
 	&__name{
 		font-weight: 700;
 		font-size: 12px;
 		color: #241400;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 
 	&__author-name{
-		margin-bottom: 13px;
+		margin-bottom: 10px;
 	}
 
 	&__shopping-cart{

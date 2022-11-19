@@ -4,9 +4,10 @@ import LoadingSpinnerSVG from "../../../SVG-components/LoadingSpinnerSVG";
 const Waiting = () => {
 
 	return (
-		<>
-			<LoadingSpinnerSVG/>
-		</>
+		<div
+			style={{ margin: '0 auto' }}>
+			<LoadingSpinnerSVG />
+		</div>
 	)
 };
 

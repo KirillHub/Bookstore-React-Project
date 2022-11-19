@@ -1,9 +1,14 @@
 import Books from '../../Components/Books/Books';
+import { useAppSelector } from '../../store/store';
 import './HotArrivals.scss';
+import { sortedBooks } from '../../store/booksSlice/slice';
 
 export default function HotArrivals() {
 
 	const linksBooksGenres = ['Фантастика', 'Бизнес-литература', 'Фэнтези', 'Детективы', 'Классика', 'Аудиокниги'];
+	const sortedBooksArray = useAppSelector(sortedBooks);
+
+	console.log(sortedBooksArray);
 
 	return (
 		<div className="hot-arrivals">
@@ -27,7 +32,11 @@ export default function HotArrivals() {
 				</div>
 
 				<div className="hot-arrivals__wrapper-books-list">
-					<Books/>
+
+					<div className='books'>
+						<Books books={sortedBooksArray} />
+					</div>
+
 				</div>
 
 			</div>

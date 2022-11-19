@@ -1,3 +1,6 @@
+export {}
+
+/*
 import { Center, VStack, Box, Button } from '@chakra-ui/react'
 import { useProtectedMutation } from '../../store/services/auth'
 
@@ -28,3 +31,5 @@ export function ProtectedComponent() {
 		</Center>
 	)
 }
+
+*/

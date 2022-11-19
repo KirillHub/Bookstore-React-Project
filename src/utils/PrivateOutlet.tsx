@@ -1,4 +1,6 @@
+export {}
 
+/*
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import { useAuth } from '../hooks/use-auth'
 
@@ -12,3 +14,5 @@ export function PrivateOutlet() {
 		<Navigate to="/login" state={{ from: location }} />
 	)
 }
+
+*/

@@ -1,10 +1,10 @@
+export{}
+/*
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { RootState } from '../store'
 import { UserResponse, LoginRequest } from "../authSlice/type"
 
-/*
-* createApi RTK Query
-*/
+! createApi RTK Query
 
 export const api = createApi({
 	baseQuery: fetchBaseQuery({
@@ -33,3 +33,5 @@ export const api = createApi({
 });
 
 export const { useLoginMutation, useProtectedMutation } = api;
+
+*/
