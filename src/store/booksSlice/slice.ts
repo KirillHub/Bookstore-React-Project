@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import axios from '../../backend/axios';
 
-import { BooksSliceState, Status, TBooks } from './type';
+import { BooksSliceState, Status, TBooks } from './types';
 import { RootState, useAppSelector } from '../store';
 
 
@@ -48,8 +48,8 @@ export const booksSlice = createSlice({
 				.sort((a, b) => +b?.id - +a?.id * Math.random())
 				.slice(0, 15);
 			state.discountBooks = action.payload.filter(book =>
-				book.priceWithoutDiscount?.trim() !== ''
-					&& book.priceWithoutDiscount ? book : '')
+				book.priceWithoutDiscount ? book : '')
+				.sort((a, b) => +b?.id - +a?.id * Math.random())
 			state.status = Status.SUCCESS;
 		});
 		builder.addCase(fetchBooks.rejected, (state) => {

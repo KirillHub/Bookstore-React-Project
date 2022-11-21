@@ -7,8 +7,6 @@ export default function Sale() {
 
 	const discountBooksArray = useAppSelector(discountBooks);
 
-	console.log(discountBooksArray);
-
 	return (
 		<div className="sale">
 

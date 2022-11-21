@@ -10,13 +10,21 @@ const Purchases = () => {
 			className='header__purchases purchases-header'>
 
 			<div
-				className='purchases-header__btn'>
-				<button>
-					<HeartSVG />
-				</button>
-				<button>
-					<CartSVG />
-				</button>
+				className='purchases-header__orders'>
+
+				<div className="purchases-header__wish-list">
+					<button>
+						<HeartSVG />
+					</button>
+				</div>
+
+				<div
+					className='purchases-header__user-cart'>
+					<button>
+						<CartSVG />
+					</button>
+				</div>
+
 			</div>
 
 			<div

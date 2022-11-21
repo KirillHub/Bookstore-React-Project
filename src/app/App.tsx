@@ -6,6 +6,7 @@ import Sale from '../Pages/Sale/Sale';
 import React from 'react';
 import { useAppDispatch } from '../store/store';
 import { fetchBooks } from '../store/booksSlice/slice';
+import Sidebar from '../Pages/Sidebar/Sidebar';
 
 
 
@@ -20,10 +21,11 @@ function App() {
 		<div className="App">
 
 			<div className='_wrapper container'>
+				{/* <Sidebar /> */}
 				<Header />
 				<Promo />
 				<HotArrivals />
-				<Sale/>
+				<Sale />
 			</div>
 
 

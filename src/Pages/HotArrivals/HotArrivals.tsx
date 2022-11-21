@@ -8,8 +8,6 @@ export default function HotArrivals() {
 	const linksBooksGenres = ['Фантастика', 'Бизнес-литература', 'Фэнтези', 'Детективы', 'Классика', 'Аудиокниги'];
 	const sortedBooksArray = useAppSelector(sortedBooks);
 
-	console.log(sortedBooksArray);
-
 	return (
 		<div className="hot-arrivals">
 			<div className="hot-arrivals__block">

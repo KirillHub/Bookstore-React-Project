@@ -1,4 +1,4 @@
-export interface TBooks{
+export interface TBooks {
 	id: number;
 	counter: number;
 	imageUrl: string;
@@ -7,9 +7,10 @@ export interface TBooks{
 	bookRating: number
 	price: number;
 	description: string;
+	bookGlobalCategory: string;
 	category: string;
 	categoryRu: string;
-	priceWithoutDiscount: string;
+	priceWithoutDiscount: number;
 };
 
 
@@ -22,7 +23,7 @@ export enum Status {
 
 
 export interface BooksSliceState {
-	selectedBooks: TBooks[] 
+	selectedBooks: TBooks[]
 	books: TBooks[]
 	booksSort: TBooks[]
 	discountBooks: TBooks[]
