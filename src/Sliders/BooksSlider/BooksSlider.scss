@@ -3,3 +3,42 @@
 	@import "../../Components/Books/Books.scss";
 }
 
+.books-slider{
+	position: absolute;
+	top: 570px;
+	left: 50%;
+	transform: translate(-50%);
+	display: inline-block;
+	padding: 0;
+	text-align: center;
+}
+
+.books-slider li {
+	list-style: none;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 3px;
+	padding: 0;
+ }
+ 
+ .books-slider li button {
+	margin-right: 20px;
+	border: none;
+	background: rgba(136, 126, 37, 0.568);
+	color: transparent;
+	cursor: pointer;
+	display: block;
+	width: 60px;
+	height: 11px;
+	border-radius: 20%;
+ }
+
+ .books-sliderr li.slick-active button {
+	background-color: rgb(8, 255, 140);
+ }
+ 
+ .books-slider li button:hover,
+ .books-slider li button:focus {
+	background: rgba(216, 196, 14, 0.959);
+	outline: 0;
+ }

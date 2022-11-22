@@ -1,5 +1,5 @@
 .sale{
-	padding: 0 0 75px 0;
+	padding: 0 0 85px 0;
 	color: #241400;
 
 	&__header{
@@ -11,4 +11,11 @@
 		font-size: 25px;
 		line-height: 196.19%;
 	}
+	&__books-slider{
+		position: relative;
+		width: 93%;
+		margin: 0 auto;
+		height: 100% !important;
+	}
+	
 }
