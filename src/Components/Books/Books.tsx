@@ -23,23 +23,24 @@ export const Books = ({ book }: BooksProps) => {
       key={book.id}
       onClick={() => setReq(req + 1)}
     >
-      <img
-        className="books__img"
-        src={book.imageUrl}
-        style={
-          book.priceWithoutDiscount
-            ? { marginBottom: "25px" }
-            : { marginBottom: "10px" }
-        }
-      />
+      <div className="books__body">
+        <img
+          className="books__img"
+          src={book.imageUrl}
+          style={
+            book.priceWithoutDiscount
+              ? { marginBottom: "27px" }
+              : { marginBottom: "14px" }
+          }
+        />
+        <BooksDescr
+          price={book.price}
+          rating={book.bookRating}
+          priceWithoutDiscount={book.priceWithoutDiscount}
+        />
 
-      <BooksDescr
-        price={book.price}
-        rating={book.bookRating}
-        priceWithoutDiscount={book.priceWithoutDiscount}
-      />
-
-      <div className="books__name">{book.bookName}</div>
+        <div className="books__name">{book.bookName}</div>
+      </div>
 
       <div className="books__footer">
         <div className="books__author-name">{book.authorName}</div>
