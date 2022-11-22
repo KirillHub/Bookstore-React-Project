@@ -11,22 +11,22 @@
 	&__title{
 		font-weight: 900;
 		font-size: 25px;
-		margin: 0 95px 30px 0;
+		margin: 0 95px 40px 0;
 		line-height: 196.19%;
 	}
 	&__links{
 		display: flex;
-		margin-top: 11px;
 	}
 	&__row{
 		font-size: 13px;
-		
 		text-align: center;
 		&:not(:last-child){
 			margin-right: 40px;
 		}
 	}
 	&__link{
+		display: block;
+		margin-top: 13px;
 		color: inherit;
 		line-height: 196.19%;
 		&:hover{
@@ -38,55 +38,23 @@
 		// padding: 50px 20px 65px 20px;
 		color: #241400;
 		text-align: left;
-
+		height: 800px;
 		
-	
-		// display: grid;
-		// grid-template-columns: repeat(5, minmax(200px, auto));
-		// grid-template-rows: repeat(3, auto);
-		// grid-auto-rows:  auto;
-		// justify-content: space-around;
-		// gap: 30px;
-
-
-	
-		/*
-		width: 12500px;
-		height: 450px;
-		display: inline-block;
-		background-color: grey;
-		overflow-x: scroll;
-		overflow-y: hidden;
-		
-		&::-webkit-scrollbar  {
-			width: 100% !important;
-		 }
-		 &::-webkit-scrollbar-track {
-			background: gold !important;
-		 }
-		 &::-webkit-scrollbar-thumb {
-			background: rgb(0, 0, 0) !important;
-		 }
-		 &::-webkit-scrollbar-thumb:hover {
-			background: rgb(255, 255, 255) !important;
-		 }
-		 
-		 &::-webkit-input-placeholder {
-			color: rgba(255, 255, 255, 0.835) !important;
-		 }
-		*/
+	}
+	&__books-slider{
+		position: relative;
+		width: 93%;
+		margin: 0 auto;
+		height: 100% !important;
 	}
 	
 }
 
+
 /*
-._wrapper-books {
-	width: 1250px;
-	height: 390px;
-	background-color: grey;
-	overflow-x: auto;
-	overflow-y: hidden;
-}
+* @media - adaptive media req from _media.scss;
+* _button - button styles;
 */
 
-// @import '../../Components/Books/Books.scss';
+@import '../../Styles/block/button';
+@import '../../Styles/block/media';

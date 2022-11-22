@@ -10,72 +10,119 @@ import Waiting from '../DataStatusLoading/Waiting/Waiting';
 
 
 
-const Books = ({ books }) => { // showProductPriceWithoutDiscount
+const Books = ({ book }) => {
 	const dispatch = useAppDispatch();
-	const selectedBooks = useAppSelector(state => state.booksList.selectedBooks); // объявленный пустой массив, в который будут динамически при клике пушиться книги, при клике "Добовит в корзину"
-
+	const selectedBooks = useAppSelector(state => state.booksList.selectedBooks);
 	const [req, setReq] = useState(0);
-
-	// let _width = `${books.length * 100}px`;
 
 	return (
 
-		<>
-			{
-				books.length === 0 ? <Waiting /> :
-					<>
-						{books?.map((book: TBooks) =>
+		<div className={`books__card`}
+			key={book.id}
+			onClick={() => setReq(req + 1)}>
 
-							<div className={`books__card`}
-								key={book.id}
-								onClick={() => setReq(req + 1)}>
-								<img
-									className='books__img'
-									src={book.imageUrl}
-								/>
+			<img
+				className='books__img'
+				src={book.imageUrl}
+				style={book.priceWithoutDiscount ? { marginBottom: '25px' }
+					: { marginBottom: '10px' }}
+			/>
 
-								<BooksDescr price={book.price} rating={book.bookRating} priceWithoutDiscount={book.priceWithoutDiscount} />
+			<BooksDescr price={book.price} rating={book.bookRating}
+				priceWithoutDiscount={book.priceWithoutDiscount} />
 
-								<div
-									className='books__name'>
-									{book.bookName}
-								</div>
+			<div
+				className='books__name'>
+				{book.bookName}
+			</div>
 
-								<div
-									className='books__author-name'>
-									{book.authorName}
-								</div>
+			<div
+				className="books__footer">
 
-								<div
-									className="books__shopping-cart">
+				<div
+					className='books__author-name'>
+					{book.authorName}
+				</div>
 
-									{selectedBooks?.find(item => item.id === book.id) === undefined ?
-										<button
-											className='btn btn__shopping-card'
-											onClick={() => dispatch(setSelectedBooks(book))}>
-											<p>в корзину</p>
-										</button> :
-										<button
-											className='btn btn__shopping-card'
-											style={{ backgroundColor: 'gray' }}
-										>
-											<p>корзина</p>
-										</button>}
+				<div className="books__shopping-cart">
+					{selectedBooks?.find(item => item.id === book.id) === undefined ?
+						<button
+							className='btn btn__shopping-card'
+							onClick={() => dispatch(setSelectedBooks(book))}>
+							<p>в корзину</p>
+						</button> :
+						<button
+							className='btn btn__shopping-card'
+							style={{ backgroundColor: 'gray' }}
+						>
+							<p>корзина</p>
+						</button>}
 
-									<button
-										className="books__btn-favorites">
-										<HeartSVG />
-									</button>
-								</div >
-							</div>
+					<button
+						className="books__btn-favorites">
+						<HeartSVG />
+					</button>
+				</div>
+			</div >
+		</div>
 
-						)}
-					</>
-			}
-		</>
 
 	);
 
+};
+
+
+export const BookForSlider = ({ id, imageUrl,
+	priceWithoutDiscount, bookRating, price, bookName,
+	authorName }) => {
+	return (
+		<div className={`books__card`}
+			key={id}>
+
+			<img
+				className='books__img'
+				src={imageUrl}
+				style={priceWithoutDiscount ? { marginBottom: '25px' }
+					: { marginBottom: '10px' }}
+			/>
+
+			<BooksDescr price={price} rating={bookRating}
+				priceWithoutDiscount={priceWithoutDiscount} />
+
+			<div
+				className='books__name'>
+				{bookName}
+			</div>
+
+			<div
+				className='books__author-name'>
+				{authorName}
+			</div>
+
+			<div
+				className="books__shopping-cart">
+
+
+				<button
+					className='btn btn__shopping-card'
+				>
+					<p>в корзину</p>
+				</button> :
+				<button
+					className='btn btn__shopping-card'
+					style={{ backgroundColor: 'gray' }}
+				>
+					<p>корзина</p>
+				</button>
+
+				<button
+					className="books__btn-favorites">
+					<HeartSVG />
+				</button>
+			</div >
+		</div>
+
+	)
 };
 
 export default Books;

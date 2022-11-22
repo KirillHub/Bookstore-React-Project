@@ -60,7 +60,7 @@ export const booksSlice = createSlice({
 
 export const { setSelectedBooks, setSortArrayOfBooks } = booksSlice.actions;
 
-export const selectedBooks = (state: RootState) => state.booksList.books;
+export const selectedBooks = (state: RootState) => state.booksList.selectedBooks;
 
 export const discountBooks = (state: RootState) => state.booksList.discountBooks;
 

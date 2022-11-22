@@ -1,18 +1,22 @@
-.header__logo {
-	display: flex;
-	margin-right: 70px;
-}
-.header__logo-text{
-	margin-left: 6px;
-	color: #4D2900;
+.header{
+
+	&__logo {
+		display: flex;
+		margin-right: 80px;
+		align-items: center;
+	}
+	&__logo-text{
+		margin-left: 6px;
+		color: #4D2900;
+	}
+	&__title {
+		text-decoration: underline;
+		font-weight: 900;
+		line-height: 17px;
+		text-transform: uppercase;
+	}
+	&__subtitle{
+		font-size: 13px;
+	}
 }
 
-.header__title {
-	text-decoration: underline;
-	font-weight: 900;
-	line-height: 17px;
-	text-transform: uppercase;
-}
-.header__subtitle{
-	font-size: 13px;
-}

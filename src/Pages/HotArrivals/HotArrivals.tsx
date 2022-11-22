@@ -2,11 +2,14 @@ import Books from '../../Components/Books/Books';
 import { useAppSelector } from '../../store/store';
 import './HotArrivals.scss';
 import { sortedBooks } from '../../store/booksSlice/slice';
+import BooksSlider from '../../Sliders/BooksSlider/BooksSlider';
+import { TBooks } from '../../store/booksSlice/types';
+import Waiting from '../../Components/DataStatusLoading/Waiting/Waiting';
 
 export default function HotArrivals() {
 
-	const linksBooksGenres = ['Фантастика', 'Бизнес-литература', 'Фэнтези', 'Детективы', 'Классика', 'Аудиокниги'];
-	const sortedBooksArray = useAppSelector(sortedBooks);
+	const linksBooksGenres = ['Фантастика', 'Фэнтези', 'Детективы', 'Классика', 'Аудиокниги'];
+	const sortedBooksArray: TBooks[] = useAppSelector(sortedBooks);
 
 	return (
 		<div className="hot-arrivals">
@@ -29,12 +32,9 @@ export default function HotArrivals() {
 					</ul>
 				</div>
 
-				<div className="hot-arrivals__wrapper-books-list">
-
-					<div className='books'>
-						<Books books={sortedBooksArray} />
-					</div>
-
+				<div
+					className='hot-arrivals__books-slider'>
+					<BooksSlider booksArray={sortedBooksArray} />
 				</div>
 
 			</div>

@@ -43,7 +43,7 @@ const Sidebar = () => {
 		<div className="sidebar">
 			<aside
 				className='sidebar__aside'>
-				<div className="sidebar__art-books-block">
+				<nav className="sidebar__art-books-block">
 					<ul
 						className='sidebar__art-books-list'>
 						{
@@ -58,7 +58,7 @@ const Sidebar = () => {
 							)
 						}
 					</ul>
-				</div>
+				</nav>
 			</aside>
 		</div>
 	)

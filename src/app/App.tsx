@@ -20,12 +20,21 @@ function App() {
 	return (
 		<div className="App">
 
-			<div className='_wrapper container'>
-				{/* <Sidebar /> */}
-				<Header />
-				<Promo />
-				<HotArrivals />
-				<Sale />
+			<div className='container'>
+
+				<div
+					className='aside-content-container'>
+					<Sidebar />
+				</div>
+
+				<div
+					className='main-content-container'>
+					<Header />
+					<Promo />
+					<HotArrivals />
+					<Sale />
+				</div>
+
 			</div>
 
 

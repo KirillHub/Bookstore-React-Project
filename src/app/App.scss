@@ -3,15 +3,23 @@
 
 ._wrapper{
   min-height: 100%;
-	// overflow: hidden;
-	position: relative;
+	overflow: hidden;
 }
 
 .container{
- 	 max-width: 1300px;
-  	padding: 0px 15px;
+	display: flex;
+	max-width: 1250px;
 	margin: 0 auto;
+  	padding: 0px 15px;
 	box-sizing: content-box;
+}
+
+.main-content-container{
+	max-width: 950px;
+}
+
+.aside-content-container{
+	max-width: 300px;
 }
 
 

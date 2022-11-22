@@ -15,7 +15,7 @@ export default function Sale() {
 			</div>
 			<div className="sale__body">
 				<div className="books">
-					<Books books={discountBooksArray} />
+					{/* <Books books={discountBooksArray} /> */}
 				</div>
 			</div>
 
