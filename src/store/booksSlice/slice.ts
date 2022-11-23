@@ -60,6 +60,7 @@ export const booksSlice = createSlice({
 
 export const { setSelectedBooks, setSortArrayOfBooks } = booksSlice.actions;
 
+export const totalNumberOfBooksOnTheBackend = (state: RootState) => state.booksList.books.length;
 export const selectedBooks = (state: RootState) => state.booksList.selectedBooks;
 export const discountBooks = (state: RootState) => state.booksList.discountBooks;
 export const sortedBooks = (state: RootState) => state.booksList.booksSort;

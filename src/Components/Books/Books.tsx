@@ -3,7 +3,7 @@ import { BooksDescr } from "./BooksRatingPrise/BooksRatingPrise";
 import "./Books.scss";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import { TBooks } from "../../store/booksSlice/types";
-import HeartSVG from "../../SVG-components/HeartSVG";
+import HeartSVG from "../SVG-Components/HeartSVG";
 import { setSelectedBooks } from "../../store/booksSlice/slice";
 
 interface BooksProps {

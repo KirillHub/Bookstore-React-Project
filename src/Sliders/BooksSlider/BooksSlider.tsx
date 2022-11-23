@@ -5,10 +5,12 @@ import { Books } from "../../Components/Books/Books";
 import { TBooks } from "../../store/booksSlice/types";
 import CustomSlickPrevArrow from "../CustomArrows/CustomSlickPrevArrow";
 import CustomSlickNextArrow from "../CustomArrows/CustomSlickNextArrow";
-import React from "react";
 
-const BooksSlider = ({ booksArray }) => {
-  // TODO: fix types
+interface TBooksProps {
+  booksArray: TBooks[];
+}
+
+const BooksSlider = ({ booksArray }: TBooksProps) => {
   const slider = useRef<Slider>(null);
 
   const settingOwnClasses = {
@@ -17,22 +19,22 @@ const BooksSlider = ({ booksArray }) => {
     infinite: true,
     speed: 500,
     arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     prevArrow: <CustomSlickPrevArrow />,
     nextArrow: <CustomSlickNextArrow />,
     responsive: [
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
